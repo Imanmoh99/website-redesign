@@ -165,8 +165,6 @@ the website, in dark theme
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section {
   padding: 5.5rem 0 1rem;
- 
-
 }
 
 .section__title,
@@ -199,65 +197,90 @@ the website, in dark theme
   overflow: hidden; /*For animation*/
 }
 
-/*=============== HEADER ===============*/
-.header {
-  width: 100%;
-  background-color: var(--body-color);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: var(--z-fixed);
-  transition: 0.3s; /*For animation dark mode*/
+/* Basic styles for the page */
+body {
+  font-family: Arial, sans-serif;
+  background-color: white;
+  color: black;
+  margin: 0;
+  padding: 0;
 }
 
-/*=============== NAV ===============*/
-.nav {
-  height: var(--header-height);
+/* Navbar styles */
+.navbar {
+  background-color: #e6eaf2;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.glass {
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0)
-  );
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
-.nav__logo,
-.nav__toggle,
-.nav__close {
-  color: var(--title-color);
-}
-
-.nav__logo {
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: -1px;
-  display: inline-flex;
+.navbar-logo {
+  display: flex;
   align-items: center;
-  column-gap: 0.5rem;
-  transition: 0.3s;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-.nav__logo-icon {
-  font-size: 1.15rem;
-  color: var(--first-color);
+.navbar-logo img {
+  height: 40px;
+  margin-right: 10px;
 }
 
-.nav__logo:hover {
-  color: var(--first-color);
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
 }
 
-.nav__toggle {
-  display: inline-flex;
-  font-size: 1.25rem;
-  cursor: pointer;
+.navbar-nav .nav-item {
+  margin-right: 20px;
 }
+
+/* Navbar links */
+.navbar-nav .nav-link {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 15px; /* Adds some padding for better spacing */
+}
+
+/* Hover effect for navbar items */
+.navbar-nav .nav-link:hover {
+  color: rgb(58, 56, 56); /* Changes text color on hover */
+  font-weight: bold; /* Makes the text bold on hover */
+
+  border-radius: 5px; /* Optional: Add some rounding to the background */
+}
+
+/* Dark theme styles */
+body.dark-theme {
+  background-color: black;
+  color: white;
+}
+
+body.dark-theme .navbar {
+  background-color: #222;
+}
+
+body.dark-theme .nav-link {
+  color: white;
+}
+
+body.dark-theme .nav-link:hover {
+  color: lightgray;
+}
+body.dark-theme .navbar-logo {
+  color: white;}
+
 
 @media screen and (max-width: 767px) {
   .nav__menu {
@@ -756,96 +779,175 @@ the website, in dark theme
   z-index: 10;
 }
 
-/*=============== FOOTER ===============*/
-.footer__container {
-  row-gap: 3rem;
+/* Footer styles */
+footer {
+  background-color: #e6eaf2;
+  padding: 40px 0;
 }
 
-.footer__logo {
-  display: inline-flex;
-  align-items: center;
-  column-gap: 0.5rem;
-  color: var(--title-color);
-  text-transform: uppercase;
-  font-weight: 700;
-  letter-spacing: -1px;
-  margin-bottom: var(--mb-2-5);
-  transition: 0.3s;
-}
-
-.footer__logo-icon {
-  font-size: 1.15rem;
-  color: var(--first-color);
-}
-
-.footer__logo:hover {
-  color: var(--first-color);
-}
-
-.footer__title {
-  font-size: var(--h3-font-size);
-  margin-bottom: var(--mb-1-5);
-}
-
-.footer__subscribe {
-  background-color: var(--first-color-lighten);
-  padding: 0.75rem;
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
   display: flex;
   justify-content: space-between;
-  border-radius: 0.5rem;
-}
-
-.footer__input {
-  width: 70%;
-  padding: 0 0.5rem;
-  background: none;
-  color: var(--text-color);
-  border: none;
-  outline: none;
-}
-
-.footer__button {
-  padding: 1rem;
-}
-
-.footer__data {
-  display: grid;
-  row-gap: 0.75rem;
-}
-
-.footer__information {
-  font-size: var(--small-font-size);
-}
-
-.footer__social {
-  display: inline-flex;
-  column-gap: 0.75rem;
-}
-
-.footer__social-link {
-  font-size: 1rem;
-  color: var(--text-color);
-  transition: 0.3s;
-}
-
-.footer__social-link:hover {
-  transform: translateY(-0.25rem);
-}
-
-.footer__cards {
-  display: inline-flex;
   align-items: center;
-  column-gap: 0.5rem;
-}
-.footer__card {
-  width: 35px;
 }
 
-.footer__copy {
+/* Left side: logo and social icons */
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-social {
+  margin-top: 20px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo img {
+  height: 60px;
+  margin-right: 15px;
+}
+
+.footer-logo span {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+}
+
+.footer-social a {
+  color: #000;
+  margin: 0 10px;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.footer-social a:hover {
+  color: #333;
+}
+
+/* Right side: navigation links */
+.footer-right {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+.footer-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.footer-nav li {
+  margin: 0 15px;
+  position: relative;
+}
+
+.footer-nav a {
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.footer-nav li ul {
+  margin-top: 10px;
+}
+
+.footer-nav li ul li {
+  margin-bottom: 5px;
+}
+
+.footer-nav a:hover {
+  font-weight: bold;
+  color: #000;
+}
+
+/* TrustPilot Button */
+.footer-center {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin: 20px 20px;
+  border-radius: 10px;
+}
+
+.footer-trustpilot {
+  background-color: #cfe6c4;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #000;
+  text-decoration: none;
+  font-weight: normal;
+  border: 1px solid #868484;
+}
+
+.footer-trustpilot:hover {
+  background-color: #b5d3a4;
+}
+
+/* Copyright section */
+.footer-copyright {
   text-align: center;
-  font-size: var(--smaller-font-size);
-  color: var(--text-color-light);
-  margin: 5rem 0 1rem;
+  font-size: 14px;
+  color: #000;
+  margin-top: 20px;
+}
+
+/* Dark theme for the footer */
+body.dark-theme footer {
+  background-color: #333;
+  color: white;
+}
+
+body.dark-theme .footer-logo span {
+  color: white;
+}
+
+body.dark-theme .footer-social a {
+  color: white;
+}
+
+body.dark-theme .footer-social a:hover {
+  color: lightgray;
+}
+
+body.dark-theme .footer-nav a {
+  color: white;
+}
+
+body.dark-theme .footer-nav a:hover {
+  color: lightgray;
+}
+
+body.dark-theme .footer-trustpilot {
+  background-color: #444;
+  color: white;
+  border: 1px solid #777;
+}
+
+body.dark-theme .footer-trustpilot:hover {
+  background-color: #555;
+}
+
+body.dark-theme .footer-copyright {
+  color: white;
 }
 
 /*=============== SCROLL UP ===============*/
