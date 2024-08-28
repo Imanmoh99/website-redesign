@@ -15,3 +15,23 @@ document.addEventListener("DOMContentLoaded", () => {
     console.warn("Partner wrapper has no content. Animation not applied.");
   }
 });
+
+// theam changer 
+// Check for saved user preference
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme) {
+  document.body.classList.add(savedTheme);
+}
+
+document.getElementById("theme-toggle").addEventListener("click", function () {
+  document.body.classList.toggle("dark-theme");
+  let theme = "light-theme";
+
+  if (document.body.classList.contains("dark-theme")) {
+    theme = "dark-theme";
+  }
+
+  // Save the user's preference
+  localStorage.setItem("theme", theme);
+});
