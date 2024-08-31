@@ -38,50 +38,56 @@
 
         <!--=============== CSS ===============-->
         <link rel="stylesheet" href="assets/css/styles.css">
-        <!-- font awesome css -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
         <title>Ethioware EdTech Initiative</title>
     </head>
     
     <body>
-           <!-- Header section start here -->
-    <nav class="navbar">
-        <div class ='logo'>
+        <!--==================== HEADER ====================-->
+        <header class="header glass" id="header">
+            <nav class="nav container">
+                <a href="#home" class="nav__logo">
+                    <img src="assets/img/logo-mini.png"> Ethioware
+                </a>
 
-     <!-- add a logo section and next to the logo image there will be a text  -->
-            <a href="#" class="navbar-logo">
-                <img src="assets/img/logo.png" alt="Logo">
-                <span>ETHIOWARE</span>
-            </a>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">About</a>
+                        </li><li class="nav__item">
+                            <a href="#approach" class="nav__link">How</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#mission" class="nav__link">Mission</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#articles" class="nav__link">Articles</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#train" class="nav__link">Register</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">Contact Us</a>
+                        </li>
+                    </ul>
 
+                    <div class="nav__close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+                </div>
 
-          
+                <div class="nav__btns">
+                    <!-- Theme change button -->
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
 
-        </div>
-        
-        <div class="navbar-collapse">
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-menu-line"></i>
+                    </div>
 
-
-
-         <ul class="navbar-nav">
-                <li class="nav-item"><a href="#home-section" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="#about-section" class="nav-link">About us</a></li>
-                <li class="nav-item"><a href="#resume-section" class="nav-link">Work With Us</a></li>
-                <li class="nav-item"><a href="#services-section" class="nav-link">Publications</a></li>
-                <li class="nav-item"><a href="#skills-section" class="nav-link">Contact Us</a></li>
-               
-                <!-- Theme toggle icon -->
-               <li class="nav-item">
-   <li class="nav-item">
-    <a href="javascript:void(0);" id="theme-toggle" class="nav-link">
-        <i class="fas fa-moon"></i>
-    </a>
-</li>
-            </ul>
-        </div>
-    </nav>
-     <!-- Header section end here  here -->
+                </div>
+            </nav>
+        </header>
 
         <main class="main">
             <!--==================== HOME ====================-->
@@ -317,7 +323,7 @@
                     Current Training Programs </h2>
                                 <div style="left: 0; width: 100%; height: 0; position: relative; padding-bottom: 129.4118%;" class="questions__content"><iframe src="https://forms.office.com/r/BwCszzkuXK" style="border-radius: 30px; top: 0; left: 0; width: 100%; height: 100%; position: absolute; border: 0;" allowfullscreen></iframe></div>
                  </section>
-            <!--==================== CONTACT ====================-->
+            <!-- ==================== CONTACT ====================
             <section class="contact section container" id="contact">                
                 <div class="contact__container grid">
                     <div class="contact__box">
@@ -379,92 +385,102 @@
                         </button>
                     </form>
                 </div>
-            </section>
+            </section> -->
+
+            <!--==================== CONTACT ====================-->
+<section class="contact section container" id="contact">                
+    <div class="contact__container grid">
+        <!-- Left Contact Information Section -->
+        <div class="contact__box contact__info">
+            <h2 class="section__title">Contact Us</h2>
+            <p>You can contact us about questions through the following contacts. Alternatively, you could fill out this form and submit it directly.</p>
+            
+            <div class="contact__information">
+                <i class="ri-mail-line contact__icon"></i>
+                <a href="mailto:info@ethioware.org">info@ethioware.org</a>
+            </div>
+            
+            <div class="contact__information">
+                <i class="ri-map-pin-line contact__icon"></i>
+                <span>22 St. Addis Ababa, Ethiopia</span>
+            </div>
+
+            <div class="contact__information">
+                <i class="ri-whatsapp-line contact__icon"></i>
+                <a href="https://wa.me/message/W4GUO2DOV4HWI1">(+251) 91 234 5678</a>
+            </div>
+        </div>
+        
+        <!-- Right Contact Form Section -->
+        <div class="contact__box contact__form">
+            <form>
+                <div class="contact__inputs">
+                    <div class="contact__content">
+                        <label class="contact__label" for="name">Name</label>
+                        <input type="text" id="name" class="contact__input" placeholder="Name" required>
+                    </div>
+
+                    <div class="contact__content">
+                        <label class="contact__label" for="email">Email</label>
+                        <input type="email" id="email" class="contact__input" placeholder="Email" required>
+                    </div>
+
+                    <div class="contact__content contact__area">
+                        <label class="contact__label" for="message">Message</label>
+                        <textarea id="message" class="contact__input" placeholder="Message" required></textarea>
+                    </div>
+                </div>
+                <button class="button button--flex" type="submit">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+            
+            
         </main>
-      <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-left">
-                <div class="footer-logo">
-                    <img src="assets/img/logo.png" alt="EthioWare Logo">
-                    <span>ETHIOWARE</span>
-                    
-                </div>
-                 <div class="footer-social">
-                    <a href="https://twitter.com/ethioware"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.youtube.com/@EthiowareSEG"><i class="fab fa-youtube"></i></a>
-                    <a href="https://instagram.com/ethioware_"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-spotify"></i></a>
-                    <a href="https://www.linkedin.com/company/ethioware"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                </div>
-               
-            </div>
-            
-            <div class="footer-right">
-                <ul class="footer-nav">
-                    <li><a href="#">Home</a>
-                    <ul>
-                    <li><a href="#">General</a></li>
-                         </ul>
+        <!--==================== FOOTER ====================-->
+        <footer class="footer section">
+            <div class="footer__container container grid">
+                <div class="footer__content">
+                    <a href="#" class="footer__logo">
+                        <img src="assets/img/logo-mini.png"> Ethioware
+                    </a>
 
-                    </li>
-                    <li><a href="#">About Us</a>
-                        <ul>
-                            <li><a href="#">History</a></li>
-                            <li><a href="#">Mission</a></li>
-                            <li><a href="#">Vision</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Work With Us</a>
-                        <ul>
-                            <li><a href="#">Interns</a></li>
-                            <li><a href="#">Volunteers</a></li>
-                            <li><a href="#">Trainees</a></li>
-                            <li><a href="#">Organizations</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Publication</a>
-                        <ul>
-                            <li><a href="#">RSS</a></li>
-                            <li><a href="#">Academic Papers</a></li>
-                            <li><a href="#">Interviews</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Contact Us</a>
-                        <ul>
-                            <li><a href="#">FAQ</a></li>
-                            <li><a href="#">Send Us A Message</a></li>
-                        </ul>
-                    </li>
-                </ul>
-
-                
-            </div>
-            
-        </div>
-           <div class="footer-center">
-                <a href="#" class="footer-trustpilot">Review Us on TrustPilot</a>
-            </div>
-
-        <div class="footer-copyright">
-            <p>EthioWare&copy; Copyright reserved. 2021 - 2024</p>
-        </div>
-    </footer>
-         <!-- TrustBox widget - Review Collector
+                    <div class="footer__content">                          
+                            
+                            <div class="footer__social">
+                                <a href="https://www.youtube.com/@EthiowareSEG"  target="_blank" class="footer__social-link">
+                                    <i class="ri-youtube-fill"></i>
+                                </a>
+                                <a href="https://instagram.com/ethioware_"  target="_blank" class="footer__social-link">
+                                    <i class="ri-instagram-line"></i>
+                                </a>
+                                <a href="https://twitter.com/ethioware"  target="_blank" class="footer__social-link">
+                                    <i class="ri-twitter-fill"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/company/ethioware" target="_blank" class="footer__social-link">
+                                    <i class="ri-linkedin-fill"></i>
+                                </a>
+                            </div>
+                    </div>
+        </footer>
+         <!-- TrustBox widget - Review Collector -->
 <div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6666fe238ece8b6766f5dfc3" data-style-height="52px" data-style-width="100%">
     <a href="https://www.trustpilot.com/review/ethioware.org" target="_blank"></a>
   </div>
-  End TrustBox widget -->
-        <!-- <p class="footer__copy">&#169; 2024 Ethioware EdTech Initiative. All Rights Reserved</p>
+  <!-- End TrustBox widget -->
+        <p class="footer__copy">&#169; 2024 Ethioware EdTech Initiative. All Rights Reserved</p>
         
-        =============== SCROLL UP ===============-->
-        <!-- <a href="#" class="scrollup" id="scroll-up"> 
+        <!--=============== SCROLL UP ===============-->
+        <a href="#" class="scrollup" id="scroll-up"> 
             <i class="ri-arrow-up-fill scrollup__icon"></i>
-        </a> -->
+        </a>
 
         <!--=============== SCROLL REVEAL ===============-->
-        <!-- <script src="assets/js/scrollreveal.min.js"></script> -->
+        <script src="assets/js/scrollreveal.min.js"></script>
         
         <!--=============== MAIN JS ===============-->
         <script src="assets/js/main.js"></script>
