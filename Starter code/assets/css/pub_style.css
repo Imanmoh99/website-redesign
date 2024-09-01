@@ -69,54 +69,55 @@
   font-family: 'Josefin Sans', sans-serif;
 }
 
-.blog .title {
+.title {
   padding: 32px 0;
   font-family: 'Josefin Sans', sans-serif;
   text-align:left ;
-  font-size: 60px;
+  font-size: 40px;
   font-weight: bold;
   margin-bottom: 30px;
 }
 
-.blog .cards {
+.cards {
   position: relative; 
   overflow: hidden; 
   display: flex;
   flex-direction: row;
 }
 
-.blog .card {
+.card {
   flex: 0 0 20%;
   margin: 0 10px;
   text-align: center;
 }
 
-.blog .thumbnail img {
+.thumbnail img {
   width: 100%;
   border-radius: 10px;
   object-fit: cover;
 }
 
-.blog .desc {
+.desc {
   margin-top: 10px;
 }
 
-.blog .blog-title {
+.blog-title {
   font-size: 30px;
   font-weight:normal;
   margin-bottom: 10px;
 }
 
-.blog .brief {
+ .brief {
   font-size: 20px;
   font-weight: lighter;
   color: #555;
   margin-bottom: 10px;
 }
 
-.blog .date {
+.date {
   font-size: 24px;
   font-weight: normal;
+  margin-bottom: 10px;
 }
 
 .pre-btn, .nxt-btn {
@@ -146,58 +147,31 @@
   font-family: 'Josefin Sans', sans-serif;
 }
 
-.interviews .title {
-  padding: 32px 0;
-  font-family: 'Josefin Sans', sans-serif;
-  text-align:left ;
-  font-size: 40px;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-
-.interviews .cards {
-  position: relative; 
-  overflow: hidden; 
-  display: flex;
-  flex-direction: row;
-}
-
-.interviews .card {
-  flex: 0 0 20%;
-  margin: 0 10px;
-  text-align: center;
-}
-
-.interviews .thumbnail img {
-  width: 100%;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-.interviews .desc {
-  margin-top: 10px;
-}
-
 .interviews .title-link {
   font-size: 30px;
   font-weight:normal;
   margin-bottom: 10px;
 }
 
-.interviews .brief {
-  font-size: 20px;
-  font-weight: lighter;
-  color: #555;
-  margin-bottom: 10px;
-}
-
-.interviews .date {
-  font-size: 24px;
-  font-weight: normal;
-}
 .interviews .pre-btn{
   top: 230%;
 }
 .interviews .nxt-btn{
   top: 230%;
+}
+.academics {
+  margin: 10px 0 ;
+  padding:16px 64px ;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.academics .title-link {
+  font-size: 30px;
+  font-weight:normal;
+  margin-bottom: 10px;
+}
+.abstract{
+  background-color: rgb(72, 64, 172);
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
 }
