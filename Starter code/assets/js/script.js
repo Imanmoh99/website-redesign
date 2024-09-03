@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// theam changer 
+// theam changer
 // Check for saved user preference
 const savedTheme = localStorage.getItem("theme");
 
@@ -35,3 +35,29 @@ document.getElementById("theme-toggle").addEventListener("click", function () {
   // Save the user's preference
   localStorage.setItem("theme", theme);
 });
+// JavaScript for toggling the sidebar
+document
+  .getElementById("hamburger-menu")
+  .addEventListener("click", function () {
+    var sidebar = document.getElementById("sidebar");
+    sidebar.classList.toggle("active");
+  });
+
+// JavaScript for closing the sidebar
+document.getElementById("close-btn").addEventListener("click", function () {
+  var sidebar = document.getElementById("sidebar");
+  sidebar.classList.remove("active");
+});
+//functionality for the FAQ SECTION 
+function toggleFAQ(element) {
+  const faqItem = element.parentElement;
+  const icon = element.querySelector(".faq-icon");
+
+  if (faqItem.classList.contains("active")) {
+    faqItem.classList.remove("active");
+    icon.textContent = "+";
+  } else {
+    faqItem.classList.add("active");
+    icon.textContent = "_";
+  }
+}
